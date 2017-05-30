@@ -1,0 +1,5 @@
+digraph {
+		"GDAX Server" -> "(local) ws connection" [label="OB msgs"]
+		"(local) ws connection" -> "(local) MQTT broker" [label="MQTT publish"]
+		"Python MQTT client" -> "(local) MQTT broker" [label="MQTT subscribe"]
+}
