@@ -1,5 +1,5 @@
 digraph {
-		"GDAX Server" -> "(local) ws connection" [label="OB msgs"]
-		"(local) ws connection" -> "(local) MQTT broker" [label="MQTT publish"]
-		"Python MQTT client" -> "(local) MQTT broker" [label="MQTT subscribe"]
+		"GDAX Server" -> "Node.js ws client" [label="OB msgs,heartbeat"]
+		"Node.js ws client" -> "MQTT broker" [label=publish]
+		"Python MQTT client" -> "MQTT broker" [label=subscribe]
 }
